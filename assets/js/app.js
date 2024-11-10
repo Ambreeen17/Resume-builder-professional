@@ -221,7 +221,12 @@ function previewImage(){
         imageDsp.src = ofEvent.target.result;
     }
 }
-
+function copyURL() {
+    const resumeURL = `resume-builder-professional-a4tdcuml0-ambreen-rais-projects.vercel.app/${Math.random().toString(36).substring(2, 15)}`;
+    navigator.clipboard.writeText(resumeURL)
+        .then(() => alert('URL copied to clipboard!'))
+        .catch(err => alert('Failed to copy URL: ' + err));
+}
 
 
 
